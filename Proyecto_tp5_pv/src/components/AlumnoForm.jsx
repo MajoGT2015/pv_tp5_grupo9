@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import { TextField, Button, Box } from "@mui/material";
 const AlumnoForm = ({ initialData, onSubmit, label }) => {
   const [form, setForm] = useState(initialData);
 
@@ -17,21 +17,26 @@ const AlumnoForm = ({ initialData, onSubmit, label }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+   <Box 
+      component="form" 
+      onSubmit={handleSubmit} 
+      sx={{ display: "flex", flexDirection: "column", gap: 2, maxWidth: 400, mx: "auto" }}
+    >
       {Object.entries(form).map(([key, value]) => (
-        <div key={key}>
-          <label>{key}:</label>
-          <input
-            name={key}
-            value={value}
-            onChange={handleChange}
-            required
-            disabled={key === 'id' && label === 'Editar'} // LU no editable al editar
-          />
-        </div>
+        <TextField
+          key={key}
+          label={key}
+          name={key}
+          value={value}
+          onChange={handleChange}
+          required
+          disabled={key === "id" && label === "Editar"} // LU no editable al editar
+        />
       ))}
-      <button type="submit">{label}</button>
-    </form>
+      <Button type="submit" variant="contained" color="primary">
+        {label}
+      </Button>
+    </Box>
   );
 };
 
