@@ -1,5 +1,7 @@
+import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import AlumnoForm from '../components/AlumnoForm';
+import { Box, Typography } from '@mui/material'; // Import MUI components
 
 const EditarAlumno = ({ alumnos, onEditar }) => {
   const { id } = useParams();
@@ -7,7 +9,15 @@ const EditarAlumno = ({ alumnos, onEditar }) => {
 
   const alumno = alumnos.find((a) => a.id === id);
 
-  if (!alumno) return <p>Alumno no encontrado</p>;
+  if (!alumno) {
+    return (
+      <Box sx={{ p: 3 }}>
+        <Typography variant="h6" color="error">
+          Alumno no encontrado
+        </Typography>
+      </Box>
+    );
+  }
 
   const handleEditar = (alumnoEditado) => {
     onEditar(alumnoEditado);
@@ -15,16 +25,17 @@ const EditarAlumno = ({ alumnos, onEditar }) => {
   };
 
   return (
-    <div>
-      <h2>Editar Alumno</h2>
+    <Box sx={{ p: 3 }}> {/* Use Box for general layout and spacing */}
+      <Typography variant="h4" component="h2" gutterBottom>
+        Editar Alumno
+      </Typography>
       <AlumnoForm
         initialData={alumno}
         onSubmit={handleEditar}
         label="Editar"
       />
-    </div>
+    </Box>
   );
 };
 
 export default EditarAlumno;
-
