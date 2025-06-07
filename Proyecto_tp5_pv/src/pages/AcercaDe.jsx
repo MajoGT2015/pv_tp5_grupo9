@@ -1,27 +1,58 @@
+import React from 'react';
+import { Typography, Box, List, ListItem, ListItemText } from '@mui/material';
+
 const AcercaDe = () => {
   return (
-    <div>
-      <h2>Acerca de esta aplicación</h2>
-      <p>Esta aplicación fue desarrollada como parte del Trabajo Práctico N.º 5 de la materia Programación Visual.</p>
+    <Box sx={{ p: 3 }}> {/* Box is a good general-purpose container, similar to a div */}
+      <Typography variant="h4" component="h2" gutterBottom>
+        Acerca de esta aplicación
+      </Typography>
+      <Typography variant="body1" paragraph>
+        Esta aplicación fue desarrollada como parte del Trabajo Práctico N.º 5 de la materia Programación Visual.
+      </Typography>
 
-      <h3>Integrantes del grupo</h3>
-      <ul>
-        <li>Callahuanca Julio Ivan - usuario GitHub: Ivan1Julio</li>
-        <li>Galarza Torres María - usuario GitHub MajoGT2015</li>
-        <li>Portillo Maria Belén - usuario GitHub : belenpor</li>
-        <li>Valeriano Hernán Joaquín - usuario GitHub: ValerianoHJ</li>
-        <li>Vilte Luis Fernando - usuario GitHub: luivilte</li>
-      </ul>
+      <Typography variant="h5" component="h3" gutterBottom>
+        Integrantes del grupo
+      </Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText primary="Callahuanca Julio Ivan - usuario GitHub: Ivan1Julio" />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText primary="Galarza Torres María - usuario GitHub MajoGT2015" />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText primary="Portillo Maria Belén - usuario GitHub : belenpor" />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText primary="Valeriano Hernán Joaquín - usuario GitHub: ValerianoHJ" />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText primary="Vilte Luis Fernando - usuario GitHub: luivilte" />
+        </ListItem>
+      </List>
 
-      <h3>Tecnologías utilizadas</h3>
-      <ul>
-        <li>React + Vite</li>
-        <li>React Router DOM</li>
-        <li>Eventos en React</li>
-        <li>JSX</li>
-        <li>JavaScript</li>
-      </ul>
-    </div>
+      <Typography variant="h5" component="h3" sx={{ mt: 4 }} gutterBottom> {/* mt for margin-top */}
+        Tecnologías utilizadas
+      </Typography>
+      <List>
+        <ListItem disablePadding>
+          <ListItemText primary="React + Vite" />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText primary="React Router DOM" />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText primary="Eventos en React" />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText primary="JSX" />
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemText primary="JavaScript" />
+        </ListItem>
+      </List>
+    </Box>
   );
 };
 
