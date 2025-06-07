@@ -1,4 +1,3 @@
-
 import { useParams } from 'react-router-dom';
 import { Card, CardContent, Typography, List, ListItem, ListItemText, Divider } from '@mui/material';
 

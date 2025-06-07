@@ -6,18 +6,20 @@ const AcercaDe = () => {
 
       <h3>Integrantes del grupo</h3>
       <ul>
-        <li>Nombre Apellido GitHub: <a href="https://github.com/usuario1" target="_blank">usuario1</a></li>
-        <li>Nombre Apellido GitHub: <a href="https://github.com/usuario2" target="_blank">usuario2</a></li>
+        <li>Callahuanca Julio Ivan - usuario GitHub: Ivan1Julio</li>
+        <li>Galarza Torres María - usuario GitHub MajoGT2015</li>
+        <li>Portillo Maria Belén - usuario GitHub : belenpor</li>
+        <li>Valeriano Hernán Joaquín - usuario GitHub: ValerianoHJ</li>
+        <li>Vilte Luis Fernando - usuario GitHub: luivilte</li>
       </ul>
 
       <h3>Tecnologías utilizadas</h3>
       <ul>
         <li>React + Vite</li>
         <li>React Router DOM</li>
-        <li>JSX</li>
         <li>Eventos en React</li>
-        <li>JavaScript moderno</li>
-        <li>(Opcional) TailwindCSS / Material UI</li>
+        <li>JSX</li>
+        <li>JavaScript</li>
       </ul>
     </div>
   );
